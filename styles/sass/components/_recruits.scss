@@ -1,0 +1,128 @@
+.recruit-wrapper {
+  text-align: center;
+  width: 100%;
+  padding: 20px 0 0 0;
+  overflow: hidden;
+
+  h1 {
+    padding-left: 15px;
+  }
+
+  p {
+    text-align: justify;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .slider {
+    max-width: 370px;
+    margin: 0 auto;
+    .slick-dots {
+      bottom: 0;
+    }
+  }
+  @media(min-width: 768px) {
+    .slider {
+      max-width: 700px;
+    }
+  }
+  @media(min-width: 1100px) {
+    .slider {
+      max-width: 1050px;
+    }
+  }
+
+  h2 {
+    margin: 0 0 0 15px;
+  }
+
+  .recruit-item {
+    position: relative;
+    width: 326px;
+    height: 500px;
+    margin: 20px auto 45px auto;
+
+    .recruit-item__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../public/images/recruit-card.svg");
+      z-index: 1;
+    }
+
+    .recruit-item__img {
+      position: absolute;
+      top: 41px;
+      left: 52px;
+      width: 222px;
+      height: 222px;
+      z-index: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .recruit-name,
+    .recruit-enlistment,
+    .recruit-rank,
+    .recruit-mos,
+    .fun-fact {
+      text-align: right;
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+      font-size: 20px;
+      font-weight: bold;
+      padding-right: 8px;
+      text-transform: uppercase;
+    }
+
+    .recruit-name {
+      bottom: 200px;
+      left: 0;
+      padding-left: 94px;
+    }
+
+    .recruit-enlistment {
+      bottom: 175px;
+      left: 0;
+      padding-left: 165px;
+    }
+
+    .recruit-rank {
+      bottom: 150px;
+      left: 0;
+      padding-left: 91px;
+    }
+
+    .recruit-mos {
+      text-align: left;
+      bottom: 74px;
+      left: 8px;
+      height: 76px;
+      padding-right: 18px;
+      font-size: 16px;
+      line-height: 26px;
+      overflow: hidden;
+
+      span {
+        padding-left: 70px;
+      }
+    }
+
+    .fun-fact {
+      text-align: center;
+      bottom: 26px;
+      left: 0;
+      width: 100%;
+      height: 20px;
+      font-size: 16px;
+      overflow: hidden;
+    }
+  }
+}

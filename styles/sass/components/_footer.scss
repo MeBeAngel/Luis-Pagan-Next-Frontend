@@ -1,0 +1,127 @@
+footer {
+  background-color: $black;
+
+  .footer-inner-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+
+    p {
+      font-size: 0.58rem;
+      line-height: 1.2rem;
+      color: $yellow;
+    }
+
+    .quick-links {
+      display: none;
+      .quick-link {
+        color: $gray;
+      }
+    }
+
+    .national-gaurd-contact-info {
+      text-align: center;
+    }
+
+    .social-tablet {
+      display: none;
+    }
+
+    .social-media {
+      text-align: center;
+      margin-bottom: 10px;
+
+      div {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        img {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (orientation: landscape) {
+  footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 150px;
+    .footer-inner-wrapper {
+      flex-direction: row;
+      p {
+        font-size: 1rem;
+        line-height: 1.9rem;
+      }
+
+      .social-mobile {
+        display: none;
+      }
+      .social-tablet {
+        display: block;
+      }
+
+      .social-media {
+        div {
+          img {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 150px;
+    .footer-inner-wrapper {
+      flex-direction: row;
+      p {
+        font-size: 1rem;
+        line-height: 1.9rem;
+      }
+
+      .social-mobile {
+        display: none;
+      }
+      .social-tablet {
+        display: block;
+      }
+
+      .social-media {
+        div {
+          img {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  footer {
+    .footer-inner-wrapper {
+      .quick-links {
+        display: block;
+      }
+      .national-gaurd-contact-info {
+        text-align: center;
+      }
+    }
+  }
+}

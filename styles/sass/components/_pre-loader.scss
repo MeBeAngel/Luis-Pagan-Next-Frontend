@@ -1,0 +1,21 @@
+#pre-loader {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $black;
+    background-image: url("../public/images/pre-loader.svg");
+    background-size: 200%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 4;
+}
+
+
+@media(min-width:768px) {
+    #pre-loader {
+        background-size: 100%;
+    }
+}

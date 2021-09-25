@@ -1,0 +1,127 @@
+.mos-card-wrapper {
+  text-align: center;
+  width: 375px;
+  border-top-left-radius: 25%;
+  border-top-right-radius: 25%;
+  background: linear-gradient(
+    180deg,
+    hsla(48, 100%, 59%, 1) 0%,
+    hsla(0, 0%, 100%, 0) 66%
+  );
+
+  .card-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $black;
+    font-weight: bold;
+    width: 365px;
+    height: 84px;
+    margin: 0 auto;
+    padding: 10px 25px;
+    font-size: 18px;
+    overflow: hidden;
+  }
+
+  .mos-card {
+    position: relative;
+    width: 365px;
+    height: 365px;
+    margin: 0 auto;
+    background-size: 100% 100%;
+    background-image: url("../public/images/mos-card.svg");
+    border-radius: 10%;
+    box-shadow: rgba(0, 0, 0, 1) 15px 25px 20px -20px;
+
+    .mos-video-wrapper {
+      display: none;
+      position: absolute;
+      top: 37px;
+      left: 37px;
+      width: 292px;
+      height: 293px;
+      background-color: $yellow;
+      z-index: 1;
+
+      video {
+        height: 100%;
+      }
+    }
+
+    /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+    .flip-card {
+      position: absolute;
+      top: 37px;
+      left: 37px;
+      background-color: $black;
+      width: 293px;
+      height: 293px;
+      perspective: 1000px; /* Remove this if you don't want the 3D effect */
+
+      /* This container is needed to position the front and back side */
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+
+      /* Position the front and back side */
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+      }
+
+      /* Style the front side (fallback if image is missing) */
+      .flip-card-front {
+        background-size: cover;
+        background-position: center;
+        border: solid $yellow 3px;
+
+        .mos-num {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          font-size: 100px;
+          font-weight: bold;
+          color: $yellow;
+          background-color: rgba($color: #000000, $alpha: 0.2);
+        }
+      }
+
+      /* Style the back side */
+      .flip-card-back {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+
+        background-color: $black;
+        transform: rotateY(180deg);
+        border: solid $yellow 3px;
+        overflow: hidden;
+
+        p {
+          text-align: justify;
+          font-size: 14px;
+          color: $yellow;
+        }
+      }
+    }
+
+    /* Do an horizontal flip when you move the mouse over the flip box container */
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+  }
+}

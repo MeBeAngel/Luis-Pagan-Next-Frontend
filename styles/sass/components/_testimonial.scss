@@ -1,0 +1,207 @@
+.testimonial-wrapper {
+  padding: 20px 15px;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  .testimonial {
+    margin: 35px auto;
+    max-width: 508px;
+
+    .testimony-two__right-video { display: none}
+
+    .testimonial__video {
+      position: relative;
+      margin-bottom: 20px;
+
+      video {
+        display: block;
+      }
+
+      .play-icon img,
+      .pause-icon,
+      .reset-icon img {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .play-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.7);
+
+        img {
+          width: 120px;
+        }
+      }
+
+      .pause-icon {
+        display: none;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        
+        img {
+          width: 15px;
+        }
+      }
+
+      .reset-icon {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.7);
+
+        img {
+          width: 90px;
+        }
+      }
+    }
+
+    .testimonial__info {
+      .info-block {
+        position: relative;
+        .quote {
+          text-align: center;
+          font-weight: bold;
+          font-style: italic;
+          margin-bottom: 20px;
+        }
+        .name,
+        .date {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: bold;
+          text-transform: uppercase;
+          width: 100%;
+          .block {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            margin: 0 10px 0 5px;
+          }
+          .date-block {
+            margin-left:10px;
+          }
+        }
+
+        .name {
+          margin-bottom: 10px;
+        }
+
+        .name__inner-text, .date__inner-text {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+.black-texture-bg {
+  padding-top: 50px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../public/images/testimony-bg-black.svg");
+}
+
+.gray-texture-bg {
+  padding-bottom: 50px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../public/images/testimony-bg-gray.svg");
+}
+
+
+@media(min-width:768px) {
+  .testimonial-wrapper {
+    .testimonial {
+      .testimonial__info {
+        .info-block {
+          .quote {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .testimonial-wrapper {
+    padding: 45px 15px;
+
+    .testimonial {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      max-width: 1160px;
+
+      .testimony-two__right-video { display: block}
+      .testimony-two__left-video { display: none}
+
+      .testimonial__video {
+        width: 45%;
+        margin-bottom: 0;
+      }
+
+      .testimonial__info {
+        width: 45%;
+
+        .info-block {
+          p {font-size: 20px;}
+          .quote {
+            text-align: left;
+          }
+          .name-date-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            .name,
+            .date {
+              padding-left: 0;
+            }
+
+            .name {
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+  .black-texture-bg {
+    padding-top: 50px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../public/images/testimony-bg-black.svg");
+  }
+
+  .gray-texture-bg {
+    padding-bottom: 50px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../public/images/testimony-bg-gray.svg");
+  }
+}

@@ -1,0 +1,31 @@
+//Abstracts
+@import './abstracts/_functions.scss';
+@import './abstracts/_mixins.scss';
+@import './abstracts/_variables.scss';
+
+//Base
+@import './base/_reset.scss';
+@import './base/_colors.scss';
+@import './base/_base.scss';
+@import './base/_typography.scss';
+
+//Components
+@import './components/_buttons.scss';
+@import './components/_header.scss';
+@import './components/_nav.scss';
+@import './components/_footer.scss';
+@import './components/_testimonial.scss';
+@import './components/_benefits.scss';
+@import './components/_recruits.scss';
+@import './components/_mos-card.scss';
+@import './components/_pre-loader.scss';
+@import './components/_national-guard-banner';
+
+//Layout
+
+
+//Pages
+@import './pages/_home-page.scss';
+@import './pages/_about-page.scss';
+@import './pages/_mos-page.scss';
+@import './pages/_form-page.scss';

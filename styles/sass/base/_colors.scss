@@ -1,0 +1,45 @@
+$yellow: #ffd530;
+
+$gray: #bfb8ab;
+
+$dark-gray: #a7a7a7;
+
+$black: #121212;
+
+$white: #fefefe;
+
+.yellow {
+  color: $yellow;
+}
+
+.black {
+  color: $black;
+}
+
+.gray {
+  color: $gray;
+}
+
+.white {
+  color: $white;
+}
+
+.background-yellow {
+  background-color: $yellow;
+}
+
+.background-black {
+  background-color: $black;
+}
+
+.background-gray {
+    background-color: $gray;
+}
+
+.background-white {
+  background-color: $white;
+}
+
+.background-trans {
+  background-color: rgba($color: #000000, $alpha: 0.5)
+}

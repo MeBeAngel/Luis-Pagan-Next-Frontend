@@ -1,0 +1,130 @@
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 85px;
+  z-index: 3;
+  background-color: $black;
+
+  nav {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px 15px;
+    z-index: 3;
+
+    .logo {
+      position: absolute;
+      left: 15px;
+      top: 5px;
+      img {
+        width: 90px;
+      }
+    }
+
+    button {
+      position: absolute;
+      top: 50%;
+      left: 125px;
+      transform: translate(0, -50%);
+    }
+
+    h1 {
+      position: absolute;
+      top: 50%;
+      left: 115px;
+      transform: translate(0, -50%);
+      color: $yellow;
+      font-size: 24px;
+    }
+
+    .drop-down {
+      width: 35px;
+      color: $yellow;
+    }
+
+    .desktop-links {
+      display: none;
+    }
+  }
+
+  .drop-down-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: calc(100vh - 85px);
+    margin-top: 85px;
+    padding: 40px 0 0 15px;
+    z-index: 2;
+    background-color: rgba($color: #000000, $alpha: 0.9);
+
+    .drop-down__links {
+      .link {
+        font-size: 32px;
+        line-height: 70px;
+        color: $white;
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .nav-wrapper {
+    width: 100%;
+    height: 95px;
+    z-index: 3;
+    background-color: $black;
+
+    nav {
+      padding: 20px 55px;
+      .logo {
+        img {
+          top: 5px;
+          left: 55px;
+          width: 100px;
+        }
+      }
+
+      button {
+        left: 165px;
+      }
+
+      h1 {
+        left: 175px;
+        font-size: 32px;
+      }
+
+      .drop-down {
+        display: none;
+      }
+
+      .desktop-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .link {
+          margin-right: 35px;
+          font-size: 32px;
+          color: $yellow;
+
+          &:last-of-type {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

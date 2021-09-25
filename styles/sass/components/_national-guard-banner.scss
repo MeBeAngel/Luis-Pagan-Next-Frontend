@@ -1,0 +1,25 @@
+.nation-guard-banner {display: none;}
+.nation-guard-banner-mobile {
+    text-align: center;
+    padding: 20px 0;
+
+    img {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+
+@media(min-width: 768px) {
+    .nation-guard-banner-mobile {display: none;}
+    .nation-guard-banner {
+        display: block;
+        text-align: center;
+        padding: 20px 0;
+    
+        img {
+            width: 90%;
+            max-width: 1250px;
+        }
+    }
+}
