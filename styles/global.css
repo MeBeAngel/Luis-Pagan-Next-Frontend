@@ -1,3 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Halant:wght@400;500;600;700&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap");
+h1, h2, h3, h4, h5, h6, p, button, span {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+h1 {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+.bold {
+  font-weight: bold;
+}
+
 *, p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -73,24 +92,6 @@ body {
 
 .hide {
   display: none;
-}
-
-h1, h2, h3, h4, h5, h6, p, button, span {
-  font-family: "Nunito Sans", sans-serif;
-}
-
-h1 {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-@media (min-width: 768px) {
-  h1 {
-    font-size: 40px;
-  }
-}
-.bold {
-  font-weight: bold;
 }
 
 button {
@@ -208,7 +209,7 @@ header .social-media div img:last-of-type {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  padding: 20px 15px;
+  padding: 15px 20px 15px 20px;
   z-index: 3;
 }
 .nav-wrapper nav .logo {
@@ -218,6 +219,9 @@ header .social-media div img:last-of-type {
 }
 .nav-wrapper nav .logo img {
   width: 90px;
+}
+.nav-wrapper nav .logo:hover {
+  cursor: pointer;
 }
 .nav-wrapper nav button {
   position: absolute;
@@ -234,8 +238,10 @@ header .social-media div img:last-of-type {
   font-size: 24px;
 }
 .nav-wrapper nav .drop-down {
-  width: 35px;
   color: #ffd530;
+}
+.nav-wrapper nav .drop-down .bars {
+  font-size: 35px;
 }
 .nav-wrapper nav .desktop-links {
   display: none;
@@ -259,7 +265,15 @@ header .social-media div img:last-of-type {
   line-height: 70px;
   color: #fefefe;
 }
+.nav-wrapper .drop-down-overlay .drop-down__links .link:hover {
+  cursor: pointer;
+}
 
+@media (min-width: 600px) {
+  .nav-wrapper nav {
+    padding: 15px 50px 15px 20px;
+  }
+}
 @media (min-width: 1000px) {
   .nav-wrapper {
     width: 100%;
@@ -295,6 +309,9 @@ header .social-media div img:last-of-type {
     font-size: 32px;
     color: #ffd530;
   }
+  .nav-wrapper nav .desktop-links .link:hover {
+    cursor: pointer;
+  }
   .nav-wrapper nav .desktop-links .link:last-of-type {
     margin-right: 0;
   }
@@ -320,6 +337,9 @@ footer .footer-inner-wrapper .quick-links {
 }
 footer .footer-inner-wrapper .quick-links .quick-link {
   color: #bfb8ab;
+}
+footer .footer-inner-wrapper .quick-links:hover {
+  cursor: pointer;
 }
 footer .footer-inner-wrapper .national-gaurd-contact-info {
   text-align: center;
@@ -549,16 +569,9 @@ footer .footer-inner-wrapper .social-media div img {
   .testimonial-wrapper .testimonial .testimonial__info .info-block .quote {
     text-align: left;
   }
-  .testimonial-wrapper .testimonial .testimonial__info .info-block .name-date-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  .testimonial-wrapper .testimonial .testimonial__info .info-block .name-date-grid .name,
-.testimonial-wrapper .testimonial .testimonial__info .info-block .name-date-grid .date {
-    padding-left: 0;
-  }
-  .testimonial-wrapper .testimonial .testimonial__info .info-block .name-date-grid .name {
-    margin-bottom: 10px;
+  .testimonial-wrapper .testimonial .testimonial__info .info-block .name,
+.testimonial-wrapper .testimonial .testimonial__info .info-block .date {
+    justify-content: flex-start;
   }
 
   .black-texture-bg {
@@ -1076,6 +1089,9 @@ footer .footer-inner-wrapper .social-media div img {
   .about-page .image img {
     height: 400px;
   }
+  .about-page .bio {
+    font-size: 20px;
+  }
 }
 @media (min-width: 1400px) {
   .about-page {
@@ -1257,4 +1273,4 @@ footer .footer-inner-wrapper .social-media div img {
   }
 }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=global.css.map */

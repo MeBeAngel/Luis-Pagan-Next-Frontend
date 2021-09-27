@@ -85,7 +85,7 @@ export default function Nav(props) {
           className="drop-down"
         >
           {/* <i className={`fas fa-bars yellow`}></i> */}
-          <FontAwesomeIcon icon={faBars} className="yellow" />
+          <FontAwesomeIcon icon={faBars} className="bars yellow" />
         </div>
 
         {/*  Desktop Only */}

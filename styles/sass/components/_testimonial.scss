@@ -169,18 +169,10 @@
           .quote {
             text-align: left;
           }
-          .name-date-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
 
-            .name,
-            .date {
-              padding-left: 0;
-            }
-
-            .name {
-              margin-bottom: 10px;
-            }
+          .name,
+          .date {
+            justify-content: flex-start;
           }
         }
       }

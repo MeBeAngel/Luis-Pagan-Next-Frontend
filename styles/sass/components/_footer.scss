@@ -20,6 +20,10 @@ footer {
       .quick-link {
         color: $gray;
       }
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     .national-gaurd-contact-info {
