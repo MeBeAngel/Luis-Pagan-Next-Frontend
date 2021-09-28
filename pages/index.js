@@ -8,6 +8,12 @@ import EmailRequest from "../components/EmailRequest";
 import Button from "../components/Button";
 
 export default function Home() {
+
+
+  useEffect( () => { document.querySelector("body").classList.add("body-class") } );
+
+
+
   ////////// Media Query Vars //////////
 
   // const isMobile = useMediaQuery({ query: "(max-width: 767px)" });

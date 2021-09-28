@@ -273,6 +273,11 @@ header .social-media div img:last-of-type {
   .nav-wrapper nav {
     padding: 15px 50px 15px 20px;
   }
+  .nav-wrapper .drop-down-overlay .drop-down__links .link {
+    font-size: 50px;
+    line-height: 130px;
+    color: #fefefe;
+  }
 }
 @media (min-width: 1000px) {
   .nav-wrapper {
@@ -287,7 +292,6 @@ header .social-media div img:last-of-type {
   .nav-wrapper nav .logo img {
     top: 5px;
     left: 55px;
-    width: 100px;
   }
   .nav-wrapper nav button {
     left: 165px;
@@ -343,6 +347,9 @@ footer .footer-inner-wrapper .quick-links:hover {
 }
 footer .footer-inner-wrapper .national-gaurd-contact-info {
   text-align: center;
+}
+footer .footer-inner-wrapper .national-gaurd-contact-info a {
+  text-decoration: none;
 }
 footer .footer-inner-wrapper .social-tablet {
   display: none;
@@ -697,7 +704,7 @@ footer .footer-inner-wrapper .social-media div img {
 }
 .recruit-wrapper p {
   text-align: justify;
-  max-width: 720px;
+  max-width: 730px;
   margin: 0 auto;
   padding: 0 15px;
 }

@@ -50,22 +50,21 @@ export default function Nav(props) {
   // Open Nav overlay / dropdown menu
   function openOverlay() {
     document.querySelector(".drop-down-overlay").style.display = "flex";
-    //document.body.style.overflow = "hidden";
-    //document.querySelector("body").style.overflow = "hidden";
+    document.querySelector("html").style.overflow = "hidden";
     setShowNavOverlay(true);
   }
 
   // Close Nav overlay / dropdown menu
   function closeOverlay() {
     document.querySelector(".drop-down-overlay").style.display = "none";
-    document.body.style.overflow = "visible";
+    document.querySelector("html").style.overflow = "visible";
     setShowNavOverlay(false);
   }
 
   return (
     <div className="nav-wrapper">
       <nav className="background-black">
-        <div className="logo">
+        <div className="logo" onClick={closeOverlay}>
           <Link href="/">
             <Image src={Logo} alt="" />
           </Link>
@@ -75,6 +74,7 @@ export default function Nav(props) {
           <Btn
             btnClass={btnLogic("nav-btn yellow-btn")}
             btnText={btnLogic("Get Started")}
+            onClick={closeOverlay}
           />
         </Link>
         <h1 className="">{pageTitle()}</h1>

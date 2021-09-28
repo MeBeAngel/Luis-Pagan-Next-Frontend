@@ -53,12 +53,17 @@ export default function FormPage(props) {
       mobileIntro.children[0].innerText = "Already Subscribed";
       mobileIntro.children[1].innerText =
         "We will get back to you as soon as possible";
+        mobileIntro.children[0].style.color = "red";
+        mobileIntro.children[1].style.color = "red";
 
       desktopIntro.children[0].innerText = "Already Subscribed";
       desktopIntro.children[1].innerText =
         "We will get back to you as soon as possible";
+       desktopIntro.children[0].style.color = "red";
+       desktopIntro.children[1].style.color = "red";
 
       resetFields();
+      window.scrollTo(0, 0);
       console.log("Email already subscribed");
     }
 

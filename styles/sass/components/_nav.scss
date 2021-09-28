@@ -96,6 +96,16 @@
     nav {
     padding: 15px 50px 15px 20px;
     }
+
+    .drop-down-overlay {  
+      .drop-down__links {
+        .link {
+          font-size: 50px;
+          line-height: 130px;
+          color: $white;
+        }
+      }
+    }
   }
 }
 
@@ -112,7 +122,6 @@
         img {
           top: 5px;
           left: 55px;
-          width: 100px;
         }
       }
 

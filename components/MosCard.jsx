@@ -10,7 +10,7 @@ export default function MosCard(props) {
           <video
             id="mos-video"
             className="mos-video"
-            muted="muted"
+            //muted="muted"
             src={props.videoUrl}
             onClick={props.videoOnClick}
           ></video>
