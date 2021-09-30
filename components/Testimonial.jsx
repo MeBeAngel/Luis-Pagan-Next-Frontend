@@ -70,7 +70,7 @@ export default function TestimonialLeft(props) {
             width="100%"
             height="100%"
             muted="muted"
-            poster={props.poster}
+            //poster={props.poster}
             src={props.videoUrl}
           ></video>
           <div className="play-icon" onClick={play}>
