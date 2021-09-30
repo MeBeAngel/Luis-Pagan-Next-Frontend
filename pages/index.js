@@ -10,9 +10,6 @@ import Button from "../components/Button";
 export default function Home() {
 
 
-  useEffect( () => { document.querySelector("body").classList.add("body-class") } );
-
-
 
   ////////// Media Query Vars //////////
 
