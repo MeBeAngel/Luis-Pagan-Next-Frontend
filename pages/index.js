@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import Link from 'next/link';
-import { useMediaQuery } from "react-responsive";
 import TestimonialLeft, {TestimonialRight} from "../components/Testimonial";
 import Benefits from "../components/Benefits";
 import Recruits from "../components/Recruits";
@@ -9,22 +8,26 @@ import Button from "../components/Button";
 
 export default function Home() {
 
-
-
-  ////////// Media Query Vars //////////
-
-  // const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
-  // const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
-  const isMobileOrTablet = useMediaQuery({ query: "(max-width: 999px)" });
-  const biggerScreens = useMediaQuery({ query: "(min-width: 1000px)" });
-
-  /////////////////////////////////////
-
-  ////////// Testimony API Call and state //////////
+// ########## State ########## //
+  const [landingVideo, setLandingVideo] = useState([]);
   const [testimonyOne, setTestimonyOne] = useState([]);
   const [testimonyTwo, setTestimonyTwo] = useState([]);
 
+
+// ########## API Calls ########## //
   useEffect(() => {
+
+// ########## Landing Video ########## //
+    fetch("https://luis-pagan-backend.herokuapp.com/landing-video", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => setLandingVideo(data));
+
+// ########## Testimony One ########## //
     fetch("https://luis-pagan-backend.herokuapp.com/testimony-1", {
       method: "GET",
       headers: {
@@ -34,6 +37,7 @@ export default function Home() {
       .then((response) => response.json())
       .then((data) => setTestimonyOne(data));
 
+// ########## Testimony Two ########## //
     fetch("https://luis-pagan-backend.herokuapp.com/testimony-2", {
       method: "GET",
       headers: {
@@ -43,8 +47,8 @@ export default function Home() {
       .then((response) => response.json())
       .then((data) => setTestimonyTwo(data));
   }, []);
-  /////////////////////////////////////////////
 
+  // ########## API End ########## //
 
   return (
     <div className="home-page-wrapper">
@@ -62,7 +66,7 @@ export default function Home() {
           muted="muted"
           playsInline="playsinline"
           loop="loop"
-          src="https://luis-pagan.s3.amazonaws.com/jumbotron-video/Nation_Gaurd_Video.mp4"
+          src={landingVideo.video_url}
         ></video>
       </section>
 
