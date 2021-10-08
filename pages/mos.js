@@ -68,7 +68,7 @@ export default function MosPage() {
 
     ////////// Strapi API call for MOS Cards //////////
     useEffect(() => {
-      fetch('https://luis-pagan-backend.herokuapp.com/mos-cards', {
+      fetch('https://luis-pagan-backend.herokuapp.com/mos-cards?_sort=id:ASC', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

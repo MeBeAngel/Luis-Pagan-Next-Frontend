@@ -45,7 +45,7 @@ export default function Recruits(props) {
 
   ////////// Strapi API call for Recruit Cards //////////
   useEffect(() => {
-    fetch('https://luis-pagan-backend.herokuapp.com/recruit-cards', {
+    fetch('https://luis-pagan-backend.herokuapp.com/recruit-cards?_sort=id:ASC', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
